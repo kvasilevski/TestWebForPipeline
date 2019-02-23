@@ -23,12 +23,14 @@ namespace TestWebForPipeline.Controllers
         [HttpGet]
         public List<UserDto> GetUsers()
         {
+            //getusers
             return _userService.GetUser();
         }
 
         [HttpGet("{id}")]
         public UserDto GetUser(int id)
         {
+            //getuser
             return _userService.GetUserById(id);
         }
 
