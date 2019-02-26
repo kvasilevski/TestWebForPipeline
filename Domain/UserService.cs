@@ -34,7 +34,6 @@ namespace Domain
                     Name = "Test2 Testovski2",
                     Email = "test2@test.com"
                 }
-
             };
         }
     }

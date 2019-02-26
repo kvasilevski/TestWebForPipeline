@@ -21,7 +21,7 @@ namespace TestWebForPipeline.Controllers
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {
-            return "value";
+            return $"return value: {id}";
         }
 
         // POST api/values

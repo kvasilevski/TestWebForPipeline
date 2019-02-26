@@ -24,7 +24,8 @@ namespace TestWebForPipeline.Controllers
         public List<UserDto> GetUsers()
         {
             //getusers
-            //getusers
+            //getusers2
+            //getusers3
             return _userService.GetUser();
         }
 
@@ -32,7 +33,8 @@ namespace TestWebForPipeline.Controllers
         public UserDto GetUser(int id)
         {
             //getuser
-            //getuser
+            //getuser2
+            //getuser3
             return _userService.GetUserById(id);
         }
 
