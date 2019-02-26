@@ -26,7 +26,7 @@ namespace TestWebForPipeline.Controllers
             //getusers
             //getusers2
             //getusers3
-            return _userService.GetUser();
+            return _userService.GetUsers();
         }
 
         [HttpGet("{id}")]

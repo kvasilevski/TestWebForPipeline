@@ -8,6 +8,10 @@ phases:
     commands:
       - echo Build started on `date`
       - dotnet publish -c release -o ./build_output TestWebForPipeline/TestWebForPipeline.csproj
+  post_build:
+    commands:
+      - echo Start Test on `date`
+      - dotnet test -v n NUnitTest/NUnitTest.csproj
 artifacts:
   files:
     - TestWebForPipeline/build_output/**/*

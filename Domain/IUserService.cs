@@ -7,6 +7,6 @@ namespace Domain
     {
         UserDto GetUserById(int id);
 
-        List<UserDto> GetUser();
+        List<UserDto> GetUsers();
     }
 }
