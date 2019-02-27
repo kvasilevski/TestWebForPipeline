@@ -1,10 +1,6 @@
 version: 0.2
 
 phases:
-  pre_build:
-    commands:
-      - echo Set Vars
-      - REPOSITORY_URI=690264925639.dkr.ecr.us-east-1.amazonaws.com/testwebforpipeline
   build:
     commands:
       - echo Build started on `date`
@@ -14,6 +10,7 @@ phases:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker images...
-      - docker tag testwebforpipeline:latest $REPOSITORY_URI:latest
-      - docker push $REPOSITORY_URI:latest
+      - $(aws ecr get-login --region us-east-1 --no-include-email)
+      - docker tag testwebforpipeline:latest 690264925639.dkr.ecr.us-east-1.amazonaws.com/testwebforpipeline:latest
+      - docker push 690264925639.dkr.ecr.us-east-1.amazonaws.com/testwebforpipeline:latest
       
