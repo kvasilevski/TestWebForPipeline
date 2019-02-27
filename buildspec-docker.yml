@@ -9,12 +9,11 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      - docker build -t testwebforpipeline .
+      - docker build -f "TestWebForPipeline/Dockerfile" -t testwebforpipeline .
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker images...
-      - $(aws ecr get-login --region us-east-1 --no-include-email)
       - docker tag testwebforpipeline:latest $REPOSITORY_URI:latest
       - docker push $REPOSITORY_URI:latest
       
