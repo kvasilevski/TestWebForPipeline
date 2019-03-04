@@ -6,7 +6,7 @@ phases:
       - echo Build started on `date`
       - echo Building the Docker image...
       - $(aws ecr get-login --region us-east-1 --no-include-email)
-      - $(aws ecs update-service --cluster code-pipeline-cluster --service code-pipeline-service)
+      - $(aws ecs update-service --service code-pipeline-service --force-new-deployment)
       - docker build -f "TestWebForPipeline/Dockerfile" -t testwebforpipeline .
   post_build:
     commands:
