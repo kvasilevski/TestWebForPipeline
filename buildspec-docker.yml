@@ -4,7 +4,7 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - echo Building the Docker image...
+      - echo Building the Docker and Cluster image...
       - $(aws ecr get-login --region us-east-1 --no-include-email)
       - $(aws ecs describe-clusters -cluster code-pipeline-cluster)
       - docker build -f "TestWebForPipeline/Dockerfile" -t testwebforpipeline .
