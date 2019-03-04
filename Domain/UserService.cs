@@ -25,7 +25,7 @@ namespace Domain
                 new UserDto
                 {
                     Id = 1,
-                    Name = "Test1 Testovski1",
+                    Name = "Initial Testovski1",
                     Email = "test1@test.com"
                 },
                 new UserDto
@@ -43,7 +43,7 @@ namespace Domain
                 new UserDto
                 {
                     Id = 4,
-                    Name = "Test4 NewUser-Testovski4",
+                    Name = "Test4 UpdateService-Testovski4",
                     Email = "test2@test.com"
                 }
             };
