@@ -39,6 +39,12 @@ namespace Domain
                     Id = 3,
                     Name = "Test3 Testovski3",
                     Email = "test2@test.com"
+                },
+                new UserDto
+                {
+                    Id = 4,
+                    Name = "Test4 NewUser-Testovski4",
+                    Email = "test2@test.com"
                 }
             };
         }
