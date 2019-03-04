@@ -14,5 +14,5 @@ phases:
       - docker tag testwebforpipeline:latest 690264925639.dkr.ecr.us-east-1.amazonaws.com/testwebforpipeline:latest
       - docker push 690264925639.dkr.ecr.us-east-1.amazonaws.com/testwebforpipeline:latest
       - echo Update claster service...
-      - $(aws ecs update-service --force-new-deployment --cluster code-pipeline-cluster --service code-pipeline-service)
+      - $(aws ecs update-service --cluster code-pipeline-cluster --service code-pipeline-service --force-new-deployment)
       
