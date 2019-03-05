@@ -21,7 +21,7 @@ namespace Tests
 
             //assert
             Assert.IsNotNull(users);
-            Assert.That(users, Has.Count.EqualTo(3));
+            Assert.That(users, Has.Count.EqualTo(5));
         }
 
         [Test]

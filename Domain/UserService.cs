@@ -43,14 +43,14 @@ namespace Domain
                 new UserDto
                 {
                     Id = 4,
-                    Name = "UpdateService7 -describe-clusters7",
-                    Email = "test2@test.com"
+                    Name = "UpdateService4 -describe-clusters4",
+                    Email = "test4@test.com"
                 },
                 new UserDto
                 {
-                    Id = 4,
-                    Name = "Final7 Finalovski7",
-                    Email = "test2@test.com"
+                    Id = 5,
+                    Name = "Final5 Finalovski5",
+                    Email = "test5@test.com"
                 }
             };
         }

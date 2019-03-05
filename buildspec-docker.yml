@@ -6,13 +6,16 @@ phases:
       - echo Build started on `date`
       - echo Building the Docker Cluster image...
       - docker build -f "TestWebForPipeline/Dockerfile" -t testwebforpipeline .
+      - echo Build completed on `date`
   post_build:
     commands:
-      - echo Build completed on `date`
-      - echo Pushing the Docker images...
+      - echo Post_build start on `date`
+      - echo Login in AWS CLI...
       - $(aws ecr get-login --region us-east-1 --no-include-email)
+      - echo ReTaging/Pushing the Docker images...
       - docker tag testwebforpipeline:latest 690264925639.dkr.ecr.us-east-1.amazonaws.com/testwebforpipeline:latest
       - docker push 690264925639.dkr.ecr.us-east-1.amazonaws.com/testwebforpipeline:latest
+      - echo Restarting ECS service...
       - aws ecs describe-clusters
       - aws ecs update-service --force-new-deployment --cluster code-pipeline-cluster --service code-pipeline-service
-      
+      - echo Post_build completed on `date`
