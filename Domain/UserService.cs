@@ -43,7 +43,7 @@ namespace Domain
                 new UserDto
                 {
                     Id = 4,
-                    Name = "UpdateService4 -Permisii6-Testovski6",
+                    Name = "UpdateService7 -describe-clusters7",
                     Email = "test2@test.com"
                 }
             };
