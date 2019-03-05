@@ -45,6 +45,12 @@ namespace Domain
                     Id = 4,
                     Name = "UpdateService7 -describe-clusters7",
                     Email = "test2@test.com"
+                },
+                new UserDto
+                {
+                    Id = 4,
+                    Name = "Final7 Finalovski7",
+                    Email = "test2@test.com"
                 }
             };
         }
